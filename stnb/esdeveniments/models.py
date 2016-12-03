@@ -6,9 +6,12 @@ import datetime
 from django.db import models
 from django.db.models import permalink
 from django.core.urlresolvers import reverse
+from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from hvad.models import TranslatableModel, TranslatedFields
 
+from stnb.seminaris.utils import persones_nom_cognoms, persones_html, \
+                                 persones_text
 from stnb.membres.models import Membre
 from stnb.utils.text_processing import text_sense_accents
 
@@ -27,7 +30,7 @@ def article_nom_fitxer(esdeveniment, nom):
     return fitxer_nom
 
 class Serie(TranslatableModel):
-    slug = models.SlugField(_('slug'), max_length=50)
+    slug = models.SlugField(_('slug'), max_length=50, blank=True)
     organitzadors = models.ManyToManyField(Membre, verbose_name=_('organisers'),
                                            related_name='series',
                                            blank=True)
@@ -47,11 +50,32 @@ class Serie(TranslatableModel):
     def __unicode__(self):
         return self.nom
 
+    def is_owned_by(self, user):
+        owned_by = False
+        membre = user.get_profile()
+        if membre in self.organitzadors.all():
+            owned_by = True
+        return owned_by
+
+    def nombre_de_esdeveniments(self):
+        return self.esdeveniments.count()
+
+    def organitzadors_html(self):
+        return persones_html(
+                list(self.organitzadors.all()) +
+                     persones_nom_cognoms(self.altres_organitzadors))
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.nom)
+        super(Serie, self).save(*args, **kwargs)
+
 class Esdeveniment(TranslatableModel):
-    slug = models.SlugField(_('slug'), max_length=100)
+    slug = models.SlugField(_('slug'), max_length=100, blank=True)
     serie = models.ForeignKey(Serie, verbose_name=_('serie'), blank=True,
                               null=True, related_name='esdeveniments')
     data = models.DateField(_('date'))
+    hora_inici = models.TimeField(_('start time'), null=True, blank=True)
+    hora_finalizacio = models.TimeField(_('end time'), null=True, blank=True)
 
     amfitrions = models.ManyToManyField(Membre, verbose_name=_('hosts'),
                                         related_name='esdeveniments_organizats',
@@ -75,7 +99,7 @@ class Esdeveniment(TranslatableModel):
     translations = TranslatedFields(
         titol = models.CharField(_('title'), max_length=255),
         abstracte = models.TextField(_('abstract'), blank=True, null=True),
-        lloc = models.TextField(_('location')),
+        lloc = models.TextField(_('location'), blank=True, null=True),
     )
 
     class Meta:
@@ -85,3 +109,29 @@ class Esdeveniment(TranslatableModel):
 
     def __unicode__(self):
         return self.titol
+
+    def is_owned_by(self, user):
+        owned_by = False
+        membre = user.get_profile()
+        if membre in self.amfitrions.all():
+            owned_by = True
+        elif membre in self.presentadors.all():
+            owned_by = True
+        elif self.serie is not None and self.serie.is_owned_by(user):
+            owned_by = True
+        return owned_by
+
+    def amfitrions_html(self):
+        return persones_html(
+                list(self.amfitrions.all()) +
+                     persones_nom_cognoms(self.altres_amfitrions))
+
+    def presentadors_html(self):
+        return persones_html(
+                list(self.presentadors.all()) +
+                     persones_nom_cognoms(self.altres_presentadors))
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.titol)
+        super(Esdeveniment, self).save(*args, **kwargs)
+

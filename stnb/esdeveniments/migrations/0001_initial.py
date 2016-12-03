@@ -8,7 +8,7 @@ import stnb.esdeveniments.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('membres', '0002_auto_20150611_1554'),
+        ('membres', '0003_auto_20161203_1335'),
     ]
 
     operations = [
@@ -16,8 +16,10 @@ class Migration(migrations.Migration):
             name='Esdeveniment',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('slug', models.SlugField(max_length=100, verbose_name='slug')),
+                ('slug', models.SlugField(max_length=100, verbose_name='slug', blank=True)),
                 ('data', models.DateField(verbose_name='date')),
+                ('hora_inici', models.TimeField(null=True, verbose_name='start time', blank=True)),
+                ('hora_finalizacio', models.TimeField(null=True, verbose_name='end time', blank=True)),
                 ('altres_amfitrions', models.CharField(max_length=250, null=True, verbose_name='other hosts', blank=True)),
                 ('altres_presentadors', models.CharField(max_length=250, null=True, verbose_name='other presenters', blank=True)),
                 ('presentacio', models.FileField(upload_to=stnb.esdeveniments.models.presentacio_nom_fitxer, null=True, verbose_name='presentation', blank=True)),
@@ -37,22 +39,23 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('titol', models.CharField(max_length=255, verbose_name='title')),
                 ('abstracte', models.TextField(null=True, verbose_name='abstract', blank=True)),
-                ('lloc', models.TextField(verbose_name='location')),
+                ('lloc', models.TextField(null=True, verbose_name='location', blank=True)),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
-                ('master', models.ForeignKey(related_name='translations', editable=False, to='esdeveniments.Esdeveniment', null=True)),
+                ('master', models.ForeignKey(related_name='translations', editable=False, to='esdeveniments.Esdeveniment')),
             ],
             options={
                 'managed': True,
                 'abstract': False,
                 'db_table': 'esdeveniments_esdeveniment_translation',
                 'db_tablespace': '',
+                'default_permissions': (),
             },
         ),
         migrations.CreateModel(
             name='Serie',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('slug', models.SlugField(verbose_name='slug')),
+                ('slug', models.SlugField(verbose_name='slug', blank=True)),
                 ('altres_organitzadors', models.CharField(max_length=250, null=True, verbose_name='other organisers', blank=True)),
                 ('organitzadors', models.ManyToManyField(related_name='series', verbose_name='organisers', to='membres.Membre', blank=True)),
             ],
@@ -68,13 +71,14 @@ class Migration(migrations.Migration):
                 ('nom', models.CharField(max_length=50, verbose_name='name')),
                 ('descripcio', models.TextField(null=True, verbose_name='description', blank=True)),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
-                ('master', models.ForeignKey(related_name='translations', editable=False, to='esdeveniments.Serie', null=True)),
+                ('master', models.ForeignKey(related_name='translations', editable=False, to='esdeveniments.Serie')),
             ],
             options={
                 'managed': True,
                 'abstract': False,
                 'db_table': 'esdeveniments_serie_translation',
                 'db_tablespace': '',
+                'default_permissions': (),
             },
         ),
         migrations.AddField(
