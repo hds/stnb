@@ -223,8 +223,7 @@ form textarea  {
 	background-color: #ff6600;
 }
 
-#menu .publicacions  {
-	font-size: 80%;
+#menu .arxiu  {
 	background-color: #ff9966;
 	/*background-color: #4b8f95;*/
 }
@@ -238,10 +237,6 @@ form textarea  {
 }
 
 /* Language specific tweeks */
-.lleng-es #menu .publicacions  {
-	font-size: 70%;
-}
-
 .lleng-es #menu .arxiu-seminaris  {
 	font-size: 80%;
 }
