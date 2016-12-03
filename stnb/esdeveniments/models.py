@@ -110,6 +110,10 @@ class Esdeveniment(TranslatableModel):
     def __unicode__(self):
         return self.titol
 
+    @permalink
+    def get_absolute_url(self):
+        return ('esdeveniment-detall', (), {'slug': self.slug})
+
     def is_owned_by(self, user):
         owned_by = False
         membre = user.get_profile()

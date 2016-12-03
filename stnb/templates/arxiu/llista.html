@@ -7,6 +7,7 @@
 {% block contingut %}
 <ul>
     <li><a href="#seminaris">{% trans "Seminars" %}</a></li>
+    <li><a href="#esdeveniments">{% trans "Events" %}</a></li>
     <li><a href="#publicacions">{% trans "Publicataions" %}</a></li>
 </ul>
 
@@ -15,6 +16,14 @@
 <div class="seminari-llista">
 {% for seminari in seminaris %}
 {% include "seminaris/_seminari_curt.html" with seminari=seminari %}
+{% endfor %}
+</div>
+
+<a name="esdeveniments"></a>
+<h3>{% trans "Events" %}</h3>
+<div class="esdeveniment-llista">
+{% for esdeveniment in esdeveniments %}
+{% include "esdeveniments/_esdeveniment_curt.html" with esdeveniment=esdeveniment %}
 {% endfor %}
 </div>
 
