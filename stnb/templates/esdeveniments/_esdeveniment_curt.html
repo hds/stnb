@@ -1,10 +1,10 @@
 {% load i18n %}
 
 <div class="esdeveniments">
-    <h3><a href="{{ esdeveniment.get_absolute_url }}">{{ esdeveniment.titol }}</a></h3>
+    <h3><a href="{{ esdeveniment.get_absolute_url }}">{{ esdeveniment.titol }}</a>{% if esdeveniment.serie %} (<a href="{{ esdeveniment.serie.get_absolute_url }}">{{ esdeveniment.serie }}</a>){% endif %}</h3>
 
     <p><strong>{% trans "Speaker" %}</strong>: {{ esdeveniment.presentadors_html|safe }}</p>
-    <p><strong>{% trans "Date" %}</strong>: {{ esdeveniment.duracio }}</p>
+    <p><strong>{% trans "Date" %}</strong>: {{ esdeveniment.data }}</p>
     <p><strong>{% trans "Location" %}</strong>: {{ esdeveniment.lloc }}</p>
 </div>
 
