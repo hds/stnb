@@ -13,14 +13,13 @@ def is_owner(user, obj):
 
 def duracio(seminari):
     dstr = ''
-    return 'FIXME: duracio de seminari: ' + str(seminari.data_inici)
     if seminari.data_inici.year == seminari.data_finalizacio.year:
         if seminari.data_inici.month == seminari.data_finalizacio.month:
             dstr= _('%(idia)s %(idata)d to %(fdia)s %(fdata)d %(imes)s, %(iany)d')
         else:
             dstr= _('%(idia)s %(idata)d %(imes)s to %(fdia)s %(fdata)d %(fmes)s, %(iany)d')
     else:
-        dstr= _('%(idia)s %(idata)d %(imes)s, %(iany)s %(fdata)d to %(fdia)d %(fmes)s, %(fany)d')
+        dstr= _('%(idia)s %(idata)d %(imes)s, %(iany)d to %(fdata)d %(fdia)s %(fmes)s, %(fany)d')
 
     return dstr % { 'idia': _(seminari.data_inici.strftime('%A').decode('utf-8')),
                     'idata': seminari.data_inici.day,
