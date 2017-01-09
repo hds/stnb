@@ -19,7 +19,7 @@ def duracio(seminari):
         else:
             dstr= _('%(idia)s %(idata)d %(imes)s to %(fdia)s %(fdata)d %(fmes)s, %(iany)d')
     else:
-        dstr= _('%(idia)s %(idata)d %(imes)s, %(iany)d to %(fdata)d %(fdia)s %(fmes)s, %(fany)d')
+        dstr= _('%(idia)s %(idata)d %(imes)s, %(iany)d to %(fdia)s %(fdata)d %(fmes)s, %(fany)d')
 
     return dstr % { 'idia': _(seminari.data_inici.strftime('%A').decode('utf-8')),
                     'idata': seminari.data_inici.day,
