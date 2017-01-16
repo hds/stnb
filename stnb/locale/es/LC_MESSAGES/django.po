@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-09 13:27+0100\n"
-"PO-Revision-Date: 2017-01-09 13:28+0100\n"
+"PO-Revision-Date: 2017-01-17 00:02+0100\n"
 "Last-Translator: Hayden Stainsby <hds@mat.uab.cat>\n"
 "Language-Team: STNB <stnbarcelona@gmail.com>\n"
 "Language: es\n"
@@ -30,7 +30,7 @@ msgstr "Confirmación de contraseña"
 
 #: stnb/comptes/forms.py:12
 msgid "Enter the same password as above, for verification."
-msgstr "Vuelve a introducir la contraseña para verificación"
+msgstr "Volver a introducir la contraseña para verificación."
 
 #: stnb/comptes/models.py:14
 msgid "email"
@@ -48,11 +48,11 @@ msgstr "apellido"
 
 #: stnb/comptes/models.py:19
 msgid "staff status"
-msgstr "status"
+msgstr "nivel de permisos del usuario"
 
 #: stnb/comptes/models.py:22
 msgid "Designates whether the user can log into this admin site."
-msgstr "Especifica si el usuario puede entrar en la página de administración"
+msgstr "Designa si el usuario puede acceder como adminstrador."
 
 #: stnb/comptes/models.py:26 stnb/seminaris/models.py:36
 msgid "active"
@@ -62,7 +62,9 @@ msgstr "activo"
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
-msgstr "Especifica si "
+msgstr ""
+"Designa si el usuari debe considerarse activo. Desmarcar en lugar de borrar "
+"cuentas."
 
 #: stnb/comptes/models.py:33
 msgid "date joined"
@@ -104,7 +106,7 @@ msgstr "comité organizador"
 #: stnb/esdeveniments/models.py:37 stnb/seminaris/models.py:25
 #: stnb/seminaris/models.py:108
 msgid "other organisers"
-msgstr "Otros organizadores"
+msgstr "otros organizadores"
 
 #: stnb/esdeveniments/models.py:43 stnb/institucions/models.py:12
 #: stnb/noticies/models.py:19 stnb/pagines/models.py:17
@@ -115,11 +117,11 @@ msgstr "descripción"
 
 #: stnb/esdeveniments/models.py:47 stnb/esdeveniments/models.py:48
 msgid "series"
-msgstr "serie"
+msgstr "series"
 
 #: stnb/esdeveniments/models.py:74
 msgid "serie"
-msgstr "series"
+msgstr "serie"
 
 #: stnb/esdeveniments/models.py:76 stnb/noticies/models.py:12
 #: stnb/noticies/models.py:31 stnb/seminaris/models.py:148
@@ -136,7 +138,7 @@ msgstr "hora final"
 
 #: stnb/esdeveniments/models.py:80
 msgid "hosts"
-msgstr "anfitrión"
+msgstr "anfitriones"
 
 #: stnb/esdeveniments/models.py:83
 msgid "other hosts"
@@ -144,11 +146,11 @@ msgstr "otros anfitriones"
 
 #: stnb/esdeveniments/models.py:85 stnb/seminaris/models.py:189
 msgid "presenters"
-msgstr "presentadores"
+msgstr "ponentes"
 
 #: stnb/esdeveniments/models.py:89 stnb/seminaris/models.py:192
 msgid "other presenters"
-msgstr "otros presentadores"
+msgstr "otros ponentes"
 
 #: stnb/esdeveniments/models.py:93 stnb/seminaris/models.py:196
 msgid "presentation"
@@ -162,7 +164,7 @@ msgstr "artículo"
 #: stnb/pagines/models.py:16 stnb/seminaris/forms.py:30
 #: stnb/seminaris/models.py:117 stnb/seminaris/models.py:203
 msgid "title"
-msgstr "titulo"
+msgstr "título"
 
 #: stnb/esdeveniments/models.py:101 stnb/seminaris/forms.py:32
 #: stnb/seminaris/models.py:204
@@ -183,7 +185,7 @@ msgstr "eventos"
 
 #: stnb/institucions/models.py:8
 msgid "short name"
-msgstr "nombre curto"
+msgstr "nombre abreviado"
 
 #: stnb/institucions/models.py:16
 msgid "institution"
@@ -195,7 +197,7 @@ msgstr "instituciones"
 
 #: stnb/membres/forms.py:10 stnb/membres/models.py:29
 msgid "member since"
-msgstr "miembre desde"
+msgstr "miembro desde"
 
 #: stnb/membres/forms.py:13
 msgid "year"
@@ -249,11 +251,11 @@ msgstr "actualizado"
 
 #: stnb/noticies/models.py:23
 msgid "news item"
-msgstr "noticía"
+msgstr "noticia"
 
 #: stnb/noticies/models.py:24
 msgid "news items"
-msgstr "noticías"
+msgstr "noticias"
 
 #: stnb/noticies/models.py:37
 msgid "alert"
@@ -297,7 +299,7 @@ msgstr "fecha de publicación"
 
 #: stnb/publicacions/models.py:36
 msgid "Only the month and year are displayed"
-msgstr "Solo el mes y el año se muestra"
+msgstr "Solo se muestra el mes y el año"
 
 #: stnb/publicacions/models.py:38
 msgid "file"
@@ -309,7 +311,7 @@ msgstr "Nombre de la publicación"
 
 #: stnb/publicacions/models.py:45
 msgid "A short description."
-msgstr "Una corta descripción."
+msgstr "Una descripción breve."
 
 #: stnb/publicacions/models.py:50 stnb/seminaris/models.py:33
 #: stnb/seminaris/models.py:111
@@ -334,7 +336,7 @@ msgstr "formulario de inscripción"
 
 #: stnb/seminaris/models.py:30
 msgid "programme PDF"
-msgstr "PDF programa"
+msgstr "programa en pdf"
 
 #: stnb/seminaris/models.py:44 stnb/seminaris/models.py:102
 #: stnb/seminaris/models.py:149
@@ -400,15 +402,15 @@ msgstr "charlas"
 
 #: stnb/seminaris/models.py:257
 msgid "Only necessary if a talk isn't chosen."
-msgstr "Necesario sólo si no se ha seleccionado ninguna charla"
+msgstr "Necesario sólo si no se ha seleccionado ninguna charla."
 
 #: stnb/seminaris/models.py:261
 msgid "programme item"
-msgstr "ítem del programa"
+msgstr "punto del programa"
 
 #: stnb/seminaris/models.py:262
 msgid "programme items"
-msgstr "ítemes del programa"
+msgstr "puntos del programa"
 
 #: stnb/seminaris/utils.py:56 stnb/seminaris/utils.py:72
 msgid "and"
@@ -463,7 +465,7 @@ msgstr "Ha ocurrido un error interno del servidor."
 
 #: stnb/templates/500.html:13
 msgid "If this error persists, please contact the"
-msgstr "Si el error persiste, por favor contacte con el"
+msgstr "Si el error persiste, por favor contactar con el"
 
 #: stnb/templates/arxiu/llista.html:5 stnb/templates/base.html:39
 msgid "Archive"
@@ -627,7 +629,7 @@ msgstr "Contraseña no restablecida"
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
-msgstr "Por favor introduzca la nueva contraseña dos veces, para verificación"
+msgstr "Por favor introduzca la nueva contraseña dos veces, para verificación."
 
 #: stnb/templates/comptes/password_reset_confirm.html:22
 msgid "New password:"
@@ -651,7 +653,7 @@ msgid ""
 "used. Please request a new password reset."
 msgstr ""
 "El enlace para restablecer la contraseña es inválido, posiblemente porque ya "
-"ha sido utilizado. Por favor, solicite restablecer la constrasenya de nuevo."
+"ha sido utilizado. Por favor, solicite restablecer la contrasenya de nuevo."
 
 #: stnb/templates/comptes/password_reset_done.html:9
 msgid ""
@@ -659,7 +661,7 @@ msgid ""
 "address you submitted. You should be receiving it shortly."
 msgstr ""
 "Las instrucciones para restablecer su contraseña se han enviado a la "
-"dirección electrónica especificada. Pueden tardar unos minutos."
+"dirección electrónica especificada. Se recibiran en breve."
 
 #: stnb/templates/comptes/password_reset_form.html:9
 msgid "Forgotten your password?"
@@ -718,7 +720,7 @@ msgstr "Registrar"
 
 #: stnb/templates/comptes/registration_form.html:15
 msgid "Sign up"
-msgstr "Registrar"
+msgstr "Registrarse"
 
 #: stnb/templates/comptes/registration_form.html:20
 msgid "Already have an account?"
@@ -738,7 +740,7 @@ msgstr "Registro completado"
 
 #: stnb/templates/comptes/registre_fet.html:11
 msgid "You have registered successfully."
-msgstr "Se ha registrado con éxito"
+msgstr "Se ha registrado con éxito."
 
 #: stnb/templates/comptes/registre_fet.html:11
 msgid "Now would be a good time to"
@@ -750,7 +752,7 @@ msgstr "añadir sus detalles"
 
 #: stnb/templates/esdeveniments/_esdeveniment_curt.html:6
 msgid "Speaker"
-msgstr "Presentador"
+msgstr "Ponente"
 
 #: stnb/templates/esdeveniments/_esdeveniment_curt.html:7
 msgid "Date"
@@ -766,7 +768,7 @@ msgstr "Ubicación"
 #: stnb/templates/esdeveniments/esdeveniment_detall.html:11
 #: stnb/templates/seminaris/xerrada_detall.html:13
 msgid "Presenters"
-msgstr "Presentadores"
+msgstr "Ponentes"
 
 #: stnb/templates/esdeveniments/esdeveniment_detall.html:15
 #: stnb/templates/seminaris/xerrada_detall.html:17
@@ -816,8 +818,8 @@ msgid ""
 "You can upload files of the presentation and a separate full length article "
 "for others to download."
 msgstr ""
-"Puedes subir ficheros de la presentación y un articulo separado también, que "
-"otros puedan descargarlas."
+"Se puede subir por separado un fichero de la presentación y uno del "
+"articulo, para ser descargados."
 
 #: stnb/templates/inici/inici.html:14
 msgid ""
@@ -835,7 +837,7 @@ msgstr "Últimas noticias"
 
 #: stnb/templates/inici/inici.html:35
 msgid "There are currently no news items."
-msgstr "Ahora mismo no hay noticias nuevas."
+msgstr "Ahora mismo no hay noticias."
 
 #: stnb/templates/membres/membre_actualitzar_form.html:6
 #: stnb/templates/membres/membre_actualitzar_form.html:7
@@ -858,7 +860,7 @@ msgstr "Eres tú."
 
 #: stnb/templates/membres/membre_detall.html:20
 msgid "Your profile is hidden, only you can see it."
-msgstr "Tu perfil está ocultado, solo tú puedes verlo."
+msgstr "Tu perfil está oculto, sólo tú puedes verlo."
 
 #: stnb/templates/membres/membre_detall.html:20
 msgid "update your profile"
@@ -866,7 +868,7 @@ msgstr "actualizar tu perfil"
 
 #: stnb/templates/membres/membre_detall.html:20
 msgid "to change this."
-msgstr "para cambiar eso."
+msgstr "para cambiarlo."
 
 #: stnb/templates/membres/membre_detall.html:25
 msgid "Please log in to see member email addresses."
@@ -903,7 +905,7 @@ msgstr "Lista de Miembros"
 
 #: stnb/templates/membres/membre_llista.html:22
 msgid "Member since"
-msgstr "Miembre desde"
+msgstr "Miembro desde"
 
 #: stnb/templates/publicacions/_publicacio_curt.html:6
 #: stnb/templates/publicacions/publicacio_llista.html:13
@@ -965,7 +967,7 @@ msgstr "Comité organizador"
 
 #: stnb/templates/seminaris/seminari_detall.html:50
 msgid "Themes have not yet been chosen."
-msgstr "Los temas todavía no han sido elegidos."
+msgstr "Los temas todavía no han sido fijados."
 
 #: stnb/templates/seminaris/seminari_detall.html:59
 msgid "The calendar has not yet been set."
@@ -1010,7 +1012,7 @@ msgstr "Actualizar charla"
 
 #: stnb/templates/seminaris/xerrada_detall.html:50
 msgid "Edit talk"
-msgstr "Actualizar charla"
+msgstr "Editar charla"
 
 #: stnb/templates/seminaris/xerrada_fitxer_actualitzar_form.html:6
 #: stnb/templates/seminaris/xerrada_fitxer_actualitzar_form.html:7

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-09 13:27+0100\n"
-"PO-Revision-Date: 2015-02-13 14:29+0100\n"
+"PO-Revision-Date: 2017-01-17 00:02+0100\n"
 "Last-Translator: Hayden Stainsby <hds@mat.uab.cat>\n"
 "Language-Team: STNB <stnbarcelona@gmail.com>\n"
 "Language: ca\n"
@@ -17,24 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: stnb/comptes/forms.py:8
 #: stnb/templates/comptes/password_reset_confirm.html:19
 msgid "Password"
 msgstr "Contrasenya"
 
+# Confirmació de password
 #: stnb/comptes/forms.py:10
 msgid "Password confirmation"
-msgstr ""
+msgstr "Confirmació de contrasenya"
 
 #: stnb/comptes/forms.py:12
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Entreu la constrasenya de nou per a verificar-la"
 
 #: stnb/comptes/models.py:14
-#, fuzzy
-#| msgid "Email"
 msgid "email"
 msgstr "Adreça electrònica"
 
@@ -46,15 +45,15 @@ msgstr "nom"
 
 #: stnb/comptes/models.py:16 stnb/membres/models.py:22
 msgid "surname"
-msgstr "cognos"
+msgstr "cognoms"
 
 #: stnb/comptes/models.py:19
 msgid "staff status"
-msgstr ""
+msgstr "nivell de permisos de l'usuari"
 
 #: stnb/comptes/models.py:22
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Designa si l'usuari pot accedir com a administrador."
 
 #: stnb/comptes/models.py:26 stnb/seminaris/models.py:36
 msgid "active"
@@ -65,20 +64,21 @@ msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Designa si l'usuari s'ha de considerar actiu. Desmarqueu-ho enlloc "
+"d'esborrar comptes."
 
 #: stnb/comptes/models.py:33
-#, fuzzy
 #| msgid "Update Profile"
 msgid "date joined"
-msgstr "Actualitzar el perfil"
+msgstr "data d'alta"
 
 #: stnb/comptes/models.py:41
 msgid "user"
-msgstr ""
+msgstr "usuari"
 
 #: stnb/comptes/models.py:42
 msgid "users"
-msgstr ""
+msgstr "usuaris"
 
 #: stnb/conf/settings/default.py:23
 #: stnb/templates/formularis/_elegir_llengua.html:5
@@ -119,11 +119,11 @@ msgstr "descripció"
 
 #: stnb/esdeveniments/models.py:47 stnb/esdeveniments/models.py:48
 msgid "series"
-msgstr ""
+msgstr "sèries"
 
 #: stnb/esdeveniments/models.py:74
 msgid "serie"
-msgstr ""
+msgstr "sèrie"
 
 #: stnb/esdeveniments/models.py:76 stnb/noticies/models.py:12
 #: stnb/noticies/models.py:31 stnb/seminaris/models.py:148
@@ -140,13 +140,12 @@ msgstr "hora de finalització"
 
 #: stnb/esdeveniments/models.py:80
 msgid "hosts"
-msgstr ""
+msgstr "amfitrions"
 
 #: stnb/esdeveniments/models.py:83
-#, fuzzy
 #| msgid "other authors"
 msgid "other hosts"
-msgstr "altres autors"
+msgstr "altres amfitrions"
 
 #: stnb/esdeveniments/models.py:85 stnb/seminaris/models.py:189
 msgid "presenters"
@@ -181,11 +180,11 @@ msgstr "lloc"
 
 #: stnb/esdeveniments/models.py:106
 msgid "event"
-msgstr ""
+msgstr "esdeveniment"
 
 #: stnb/esdeveniments/models.py:107
 msgid "events"
-msgstr ""
+msgstr "esdeveniments"
 
 #: stnb/institucions/models.py:8
 msgid "short name"
@@ -283,7 +282,7 @@ msgstr "pàgines planes"
 
 #: stnb/publicacions/models.py:24
 msgid "authors"
-msgstr "autor"
+msgstr "autors"
 
 #: stnb/publicacions/models.py:27
 msgid "other authors"
@@ -303,7 +302,7 @@ msgstr "data de publicació"
 
 #: stnb/publicacions/models.py:36
 msgid "Only the month and year are displayed"
-msgstr "només es veu el mes i l'any"
+msgstr "Només es mostra el mes i l'any"
 
 #: stnb/publicacions/models.py:38
 msgid "file"
@@ -311,7 +310,7 @@ msgstr "fitxer"
 
 #: stnb/publicacions/models.py:42
 msgid "Publication name"
-msgstr "nom de publicació"
+msgstr "Nom de la publicació"
 
 #: stnb/publicacions/models.py:45
 msgid "A short description."
@@ -340,7 +339,7 @@ msgstr "formulari d'inscripció"
 
 #: stnb/seminaris/models.py:30
 msgid "programme PDF"
-msgstr "programa PDF"
+msgstr "programa en pdf"
 
 #: stnb/seminaris/models.py:44 stnb/seminaris/models.py:102
 #: stnb/seminaris/models.py:149
@@ -364,20 +363,17 @@ msgstr ""
 "%(iany)d"
 
 #: stnb/seminaris/models.py:63 stnb/seminaris/templatetags/seminari.py:22
-#, fuzzy, python-format
-#| msgid ""
-#| "%(idia)s %(idata)d %(imes)s, %(iany)s %(fdata)d to %(fdia)d %(fmes)s, "
-#| "%(fany)d"
+#, python-format
 msgid ""
 "%(idia)s %(idata)d %(imes)s, %(iany)d to %(fdia)s %(fdata)d %(fmes)s, "
 "%(fany)d"
 msgstr ""
-"del %(idia)s %(idata)d de %(imes)s de %(iany)s al %(fdata)d %(fdia)d de "
+"del %(idia)s %(idata)d de %(imes)s de %(iany)d al %(fdia)s %(fdata)d de "
 "%(fmes)s de %(fany)d"
 
 #: stnb/seminaris/models.py:104 stnb/seminaris/models.py:188
 msgid "order"
-msgstr "ordenació"
+msgstr "ordre"
 
 #: stnb/seminaris/models.py:114
 msgid "references"
@@ -409,7 +405,7 @@ msgstr "xerrades"
 
 #: stnb/seminaris/models.py:257
 msgid "Only necessary if a talk isn't chosen."
-msgstr "Necessari només si no s'ha seleccionat cap xerrada"
+msgstr "Necessari només si no s'ha seleccionat cap xerrada."
 
 #: stnb/seminaris/models.py:261
 msgid "programme item"
@@ -429,11 +425,11 @@ msgstr "Error 403"
 
 #: stnb/templates/403.html:10
 msgid "Permission denied"
-msgstr "permís denegat"
+msgstr "Permís denegat"
 
 #: stnb/templates/403.html:12
 msgid "You do not have permission to view this page."
-msgstr "No teniu permés per veure aquesta pàgina."
+msgstr "No teniu permís per veure aquesta pàgina."
 
 #: stnb/templates/403.html:12 stnb/templates/404.html:12
 #: stnb/templates/500.html:15
@@ -452,11 +448,11 @@ msgstr "Error 404"
 
 #: stnb/templates/404.html:10
 msgid "Page not found"
-msgstr "Pàgina no encontrat"
+msgstr "Pàgina no trobada"
 
 #: stnb/templates/404.html:12
 msgid "The page you are looking for could not be found."
-msgstr "La pàgina que busques no s'ha pogut trobar."
+msgstr "La pàgina buscada no s'ha pogut trobar."
 
 #: stnb/templates/500.html:5 stnb/templates/500.html.py:7
 msgid "Error 500"
@@ -468,7 +464,7 @@ msgstr "Error intern del servidor"
 
 #: stnb/templates/500.html:13
 msgid "An internal server error has occurred."
-msgstr "S'ha produít  un error intern del servidor."
+msgstr "S'ha produít un error intern del servidor."
 
 #: stnb/templates/500.html:13
 msgid "If this error persists, please contact the"
@@ -476,17 +472,16 @@ msgstr "Si aquest error persisteix, contacteu amb el"
 
 #: stnb/templates/arxiu/llista.html:5 stnb/templates/base.html:39
 msgid "Archive"
-msgstr ""
+msgstr "Arxiu"
 
 #: stnb/templates/arxiu/llista.html:9 stnb/templates/arxiu/llista.html.py:15
-#, fuzzy
 #| msgid "seminars"
 msgid "Seminars"
-msgstr "seminaris"
+msgstr "Seminaris"
 
 #: stnb/templates/arxiu/llista.html:10 stnb/templates/arxiu/llista.html:23
 msgid "Events"
-msgstr ""
+msgstr "Esdeveniments"
 
 #: stnb/templates/arxiu/llista.html:11 stnb/templates/arxiu/llista.html:31
 msgid "Publications"
@@ -508,7 +503,7 @@ msgstr "Calendari"
 
 #: stnb/templates/base.html:40
 msgid "About<br />STNB"
-msgstr "Sobre<br />STNB"
+msgstr "Sobre<br />el STNB"
 
 #: stnb/templates/base.html:41
 msgid "Members"
@@ -555,7 +550,7 @@ msgstr "alguns drets reservats"
 
 #: stnb/templates/calendari/llista.html:8
 msgid "Upcoming"
-msgstr ""
+msgstr "Proper"
 
 #: stnb/templates/comptes/logged_out.html:4
 msgid "Logged out"
@@ -577,7 +572,7 @@ msgstr "Podeu"
 
 #: stnb/templates/comptes/logged_out.html:11
 msgid "log in again"
-msgstr "iniciar altra sessió"
+msgstr "iniciar una altra sessió"
 
 #: stnb/templates/comptes/logged_out.html:11
 msgid "or return to the"
@@ -624,7 +619,7 @@ msgstr "Contrasenya restablerta"
 
 #: stnb/templates/comptes/password_reset_complete.html:11
 msgid "Your new password has been set. You may go ahead and log in now."
-msgstr "La contrasenya ha estat actualitzada. Podeu iniciar  sessió"
+msgstr "La contrasenya ha estat actualitzada. Podeu iniciar sessió."
 
 #: stnb/templates/comptes/password_reset_confirm.html:9
 msgid "Enter new password"
@@ -650,7 +645,7 @@ msgstr "Confirmar la contrasenya"
 
 #: stnb/templates/comptes/password_reset_confirm.html:29
 msgid "Confirm password:"
-msgstr "Confirmar la contrasenya"
+msgstr "Confirmar la contrasenya:"
 
 #: stnb/templates/comptes/password_reset_confirm.html:30
 msgid "Change my password"
@@ -661,17 +656,17 @@ msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
-"L'enllaç per  restablir la contrasenya és invàlid, possiblement perquè¨ ja "
-"ha estat utilitzat. Si us plau, demaneu el restabliment de la teva "
-"contrasenya una altra vegada."
+"L'enllaç per restablir la contrasenya és invàlid, possiblement perquè ja ha "
+"estat utilitzat. Si us plau, demaneu el restabliment de la contrasenya una "
+"altra vegada."
 
 #: stnb/templates/comptes/password_reset_done.html:9
 msgid ""
 "We've e-mailed you instructions for setting your password to the e-mail "
 "address you submitted. You should be receiving it shortly."
 msgstr ""
-"Les instruccions per restablir la contrasenya s'han enviat al'adreça "
-"electrònica especificada."
+"Les instruccions per restablir la contrasenya s'han enviat a l'adreça "
+"electrònica especificada. Les rebreu en breu."
 
 #: stnb/templates/comptes/password_reset_form.html:9
 msgid "Forgotten your password?"
@@ -730,7 +725,7 @@ msgstr "Registrar"
 
 #: stnb/templates/comptes/registration_form.html:15
 msgid "Sign up"
-msgstr "Registrar"
+msgstr "Registreu-vos"
 
 #: stnb/templates/comptes/registration_form.html:20
 msgid "Already have an account?"
@@ -750,7 +745,7 @@ msgstr "Registre completat"
 
 #: stnb/templates/comptes/registre_fet.html:11
 msgid "You have registered successfully."
-msgstr "Us heu registrat amb éxit"
+msgstr "Us heu registrat amb èxit."
 
 #: stnb/templates/comptes/registre_fet.html:11
 msgid "Now would be a good time to"
@@ -758,15 +753,13 @@ msgstr "Ara seria un bon moment per"
 
 #: stnb/templates/comptes/registre_fet.html:11
 msgid "add your details"
-msgstr "afegiu els vostres detalls"
+msgstr "afegir els vostres detalls"
 
 #: stnb/templates/esdeveniments/_esdeveniment_curt.html:6
 msgid "Speaker"
-msgstr ""
+msgstr "Ponent"
 
 #: stnb/templates/esdeveniments/_esdeveniment_curt.html:7
-#, fuzzy
-#| msgid "Dates"
 msgid "Date"
 msgstr "Dates"
 
@@ -821,10 +814,9 @@ msgstr "No hi ha fitxers per descarregar"
 
 #: stnb/templates/esdeveniments/esdeveniment_fitxer_actualitzar_form.html:6
 #: stnb/templates/esdeveniments/esdeveniment_fitxer_actualitzar_form.html:7
-#, fuzzy
 #| msgid "Update talk files"
 msgid "Update event files"
-msgstr "Actualitzar fixters de la xerrada"
+msgstr "Actualitzar fitxers de l'esdeveniment"
 
 #: stnb/templates/esdeveniments/esdeveniment_fitxer_actualitzar_form.html:14
 #: stnb/templates/seminaris/xerrada_fitxer_actualitzar_form.html:14
@@ -832,8 +824,8 @@ msgid ""
 "You can upload files of the presentation and a separate full length article "
 "for others to download."
 msgstr ""
-"Podeu pujar fixters de la presentació i un article separat per que altres "
-"les puguin descarregar."
+"Podeu pujar per separat fitxers de la presentació i de l'article, per a que "
+"puguin ser descarregats."
 
 #: stnb/templates/inici/inici.html:14
 msgid ""
@@ -851,12 +843,12 @@ msgstr "Últimes noticíes"
 
 #: stnb/templates/inici/inici.html:35
 msgid "There are currently no news items."
-msgstr "Ara mateix no hi ha cap notícia"
+msgstr "Ara mateix no hi ha cap notícia."
 
 #: stnb/templates/membres/membre_actualitzar_form.html:6
 #: stnb/templates/membres/membre_actualitzar_form.html:7
 msgid "Update member profile"
-msgstr "Actualitzar perfil"
+msgstr "Actualitzar perfil de membre"
 
 #: stnb/templates/membres/membre_detall.html:4
 #: stnb/templates/membres/membre_detall.html:5
@@ -886,7 +878,7 @@ msgstr "per canviar-ho."
 
 #: stnb/templates/membres/membre_detall.html:25
 msgid "Please log in to see member email addresses."
-msgstr "Si us plau, inicieu sessió per veure el correu electrònic d'un membre"
+msgstr "Si us plau, inicieu sessió per veure el correu electrònic d'un membre."
 
 #: stnb/templates/membres/membre_detall.html:28
 msgid "Link"
@@ -980,7 +972,7 @@ msgstr "Comitè organitzador"
 
 #: stnb/templates/seminaris/seminari_detall.html:50
 msgid "Themes have not yet been chosen."
-msgstr "Els temes encara no s'han escollit"
+msgstr "Els temes encara no s'han escollit."
 
 #: stnb/templates/seminaris/seminari_detall.html:59
 msgid "The calendar has not yet been set."
@@ -1025,16 +1017,16 @@ msgstr "Actualitzar xerrada"
 
 #: stnb/templates/seminaris/xerrada_detall.html:50
 msgid "Edit talk"
-msgstr "Actualitzar xerrada"
+msgstr "Editar xerrada"
 
 #: stnb/templates/seminaris/xerrada_fitxer_actualitzar_form.html:6
 #: stnb/templates/seminaris/xerrada_fitxer_actualitzar_form.html:7
 msgid "Update talk files"
-msgstr "Actualitzar fixters de la xerrada"
+msgstr "Actualitzar fitxers de la xerrada"
 
 #: stnb/templates/sobre-stnb/sobre-stnb.html:4
 msgid "About STNB"
-msgstr "Sobre STNB"
+msgstr "Sobre el STNB"
 
 #: stnb/templates/sobre-stnb/sobre-stnb.html:8
 msgid ""
